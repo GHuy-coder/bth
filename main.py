@@ -39,7 +39,7 @@ def hien_thi(stt, ki_hieu, ten, ntk, hoatri): # tạo một hàm với các thô
         window.destroy()
     window = Window(app) # tạo cửa sổ mới để hiển thị thông tin
 
-    # thông tin cần hiện thị
+    # thông tin cần hiển thị
     Text(window,f"STT: {stt}")
     Text(window,f"Kí hiệu: {ki_hieu}")
     Text(window,f"Tên: {ten}")
