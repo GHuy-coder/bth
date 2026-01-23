@@ -1,118 +1,118 @@
-1 | H | Hydrogen | 1.008
-2 | He | Helium | 4.0026
-3 | Li | Lithium | 6.94
-4 | Be | Beryllium | 9.0122
-5 | B | Boron | 10.81
-6 | C | Carbon | 12.011
-7 | N | Nitrogen | 14.007
-8 | O | Oxygen | 15.999
-9 | F | Fluorine | 18.998
-10 | Ne | Neon | 20.180
-11 | Na | Sodium | 22.990
-12 | Mg | Magnesium | 24.305
-13 | Al | Aluminium | 26.982
-14 | Si | Silicon | 28.085
-15 | P | Phosphorus | 30.974
-16 | S | Sulfur | 32.06
-17 | Cl | Chlorine | 35.45
-18 | Ar | Argon | 39.948
-19 | K | Potassium | 39.098
-20 | Ca | Calcium | 40.078
-21 | Sc | Scandium | 44.956
-22 | Ti | Titanium | 47.867
-23 | V | Vanadium | 50.942
-24 | Cr | Chromium | 51.996
-25 | Mn | Manganese | 54.938
-26 | Fe | Iron | 55.845
-27 | Co | Cobalt | 58.933
-28 | Ni | Nickel | 58.693
-29 | Cu | Copper | 63.546
-30 | Zn | Zinc | 65.38
-31 | Ga | Gallium | 69.723
-32 | Ge | Germanium | 72.630
-33 | As | Arsenic | 74.922
-34 | Se | Selenium | 78.971
-35 | Br | Bromine | 79.904
-36 | Kr | Krypton | 83.798
-37 | Rb | Rubidium | 85.468
-38 | Sr | Strontium | 87.62
-39 | Y | Yttrium | 88.906
-40 | Zr | Zirconium | 91.224
-41 | Nb | Niobium | 92.906
-42 | Mo | Molybdenum | 95.95
-43 | Tc | Technetium | [97]
-44 | Ru | Ruthenium | 101.07
-45 | Rh | Rhodium | 102.91
-46 | Pd | Palladium | 106.42
-47 | Ag | Silver | 107.87
-48 | Cd | Cadmium | 112.41
-49 | In | Indium | 114.82
-50 | Sn | Tin | 118.71
-51 | Sb | Antimony | 121.76
-52 | Te | Tellurium | 127.60
-53 | I | Iodine | 126.90
-54 | Xe | Xenon | 131.29
-55 | Cs | Caesium | 132.91
-56 | Ba | Barium | 137.33
-57 | La | Lanthanum | 138.91
-58 | Ce | Cerium | 140.12
-59 | Pr | Praseodymium | 140.91
-60 | Nd | Neodymium | 144.24
-61 | Pm | Promethium | [145]
-62 | Sm | Samarium | 150.36
-63 | Eu | Europium | 151.96
-64 | Gd | Gadolinium | 157.25
-65 | Tb | Terbium | 158.93
-66 | Dy | Dysprosium | 162.50
-67 | Ho | Holmium | 164.93
-68 | Er | Erbium | 167.26
-69 | Tm | Thulium | 168.93
-70 | Yb | Ytterbium | 173.05
-71 | Lu | Lutetium | 174.97
-72 | Hf | Hafnium | 178.49
-73 | Ta | Tantalum | 180.95
-74 | W | Tungsten | 183.84
-75 | Re | Rhenium | 186.21
-76 | Os | Osmium | 190.23
-77 | Ir | Iridium | 192.22
-78 | Pt | Platinum | 195.08
-79 | Au | Gold | 196.97
-80 | Hg | Mercury | 200.59
-81 | Tl | Thallium | 204.38
-82 | Pb | Lead | 207.2
-83 | Bi | Bismuth | 208.98
-84 | Po | Polonium | [209]
-85 | At | Astatine | [210]
-86 | Rn | Radon | [222]
-87 | Fr | Francium | [223]
-88 | Ra | Radium | [226]
-89 | Ac | Actinium | [227]
-90 | Th | Thorium | 232.04
-91 | Pa | Protactinium | 231.04
-92 | U | Uranium | 238.03
-93 | Np | Neptunium | [237]
-94 | Pu | Plutonium | [244]
-95 | Am | Americium | [243]
-96 | Cm | Curium | [247]
-97 | Bk | Berkelium | [247]
-98 | Cf | Californium | [251]
-99 | Es | Einsteinium | [252]
-100 | Fm | Fermium | [257]
-101 | Md | Mendelevium | [258]
-102 | No | Nobelium | [259]
-103 | Lr | Lawrencium | [262]
-104 | Rf | Rutherfordium | [267]
-105 | Db | Dubnium | [270]
-106 | Sg | Seaborgium | [269]
-107 | Bh | Bohrium | [270]
-108 | Hs | Hassium | [270]
-109 | Mt | Meitnerium | [278]
-110 | Ds | Darmstadtium | [281]
-111 | Rg | Roentgenium | [281]
-112 | Cn | Copernicium | [285]
-113 | Nh | Nihonium | [286]
-114 | Fl | Flerovium | [289]
-115 | Mc | Moscovium | [289]
-116 | Lv | Livermorium | [293]
-117 | Ts | Tennessine | [293]
-118 | Og | Oganesson | [294]
+1 | H | Hydrogen | 1.008 | I
+2 | He | Helium | 4.0026 | 0
+3 | Li | Lithium | 6.94 | I
+4 | Be | Beryllium | 9.0122 | II
+5 | B | Boron | 10.81 | III
+6 | C | Carbon | 12.011 | IV
+7 | N | Nitrogen | 14.007 | III, V
+8 | O | Oxygen | 15.999 | II
+9 | F | Fluorine | 18.998 | I
+10 | Ne | Neon | 20.180 | 0
+11 | Na | Sodium | 22.990 | I
+12 | Mg | Magnesium | 24.305 | II
+13 | Al | Aluminium | 26.982 | III
+14 | Si | Silicon | 28.085 | IV
+15 | P | Phosphorus | 30.974 | III, V
+16 | S | Sulfur | 32.06 | II, IV, VI
+17 | Cl | Chlorine | 35.45 | I, III, V, VII
+18 | Ar | Argon | 39.948 | 0
+19 | K | Potassium | 39.098 | I
+20 | Ca | Calcium | 40.078 | II
+21 | Sc | Scandium | 44.956 | III
+22 | Ti | Titanium | 47.867 | II, III, IV
+23 | V | Vanadium | 50.942 | II, III, IV, V
+24 | Cr | Chromium | 51.996 | II, III, VI
+25 | Mn | Manganese | 54.938 | II, IV, VII
+26 | Fe | Iron | 55.845 | II, III
+27 | Co | Cobalt | 58.933 | II, III
+28 | Ni | Nickel | 58.693 | II, III
+29 | Cu | Copper | 63.546 | I, II
+30 | Zn | Zinc | 65.38 | II
+31 | Ga | Gallium | 69.723 | III
+32 | Ge | Germanium | 72.630 | II, IV
+33 | As | Arsenic | 74.922 | III, V
+34 | Se | Selenium | 78.971 | II, IV, VI
+35 | Br | Bromine | 79.904 | I, III, V, VII
+36 | Kr | Krypton | 83.798 | 0, II
+37 | Rb | Rubidium | 85.468 | I
+38 | Sr | Strontium | 87.62 | II
+39 | Y | Yttrium | 88.906 | III
+40 | Zr | Zirconium | 91.224 | IV
+41 | Nb | Niobium | 92.906 | III, V
+42 | Mo | Molybdenum | 95.95 | IV, VI
+43 | Tc | Technetium | [97] | IV, VII
+44 | Ru | Ruthenium | 101.07 | III, IV
+45 | Rh | Rhodium | 102.91 | III
+46 | Pd | Palladium | 106.42 | II, IV
+47 | Ag | Silver | 107.87 | I
+48 | Cd | Cadmium | 112.41 | II
+49 | In | Indium | 114.82 | III
+50 | Sn | Tin | 118.71 | II, IV
+51 | Sb | Antimony | 121.76 | III, V
+52 | Te | Tellurium | 127.60 | II, IV, VI
+53 | I | Iodine | 126.90 | I, III, V, VII
+54 | Xe | Xenon | 131.29 | 0, II, IV, VI
+55 | Cs | Caesium | 132.91 | I
+56 | Ba | Barium | 137.33 | II
+57 | La | Lanthanum | 138.91 | III
+58 | Ce | Cerium | 140.12 | III, IV
+59 | Pr | Praseodymium | 140.91 | III
+60 | Nd | Neodymium | 144.24 | III
+61 | Pm | Promethium | [145] | III
+62 | Sm | Samarium | 150.36 | II, III
+63 | Eu | Europium | 151.96 | II, III
+64 | Gd | Gadolinium | 157.25 | III
+65 | Tb | Terbium | 158.93 | III, IV
+66 | Dy | Dysprosium | 162.50 | III
+67 | Ho | Holmium | 164.93 | III
+68 | Er | Erbium | 167.26 | III
+69 | Tm | Thulium | 168.93 | III
+70 | Yb | Ytterbium | 173.05 | II, III
+71 | Lu | Lutetium | 174.97 | III
+72 | Hf | Hafnium | 178.49 | IV
+73 | Ta | Tantalum | 180.95 | V
+74 | W | Tungsten | 183.84 | IV, VI
+75 | Re | Rhenium | 186.21 | IV, VII
+76 | Os | Osmium | 190.23 | IV, VI, VIII
+77 | Ir | Iridium | 192.22 | III, IV
+78 | Pt | Platinum | 195.08 | II, IV
+79 | Au | Gold | 196.97 | I, III
+80 | Hg | Mercury | 200.59 | I, II
+81 | Tl | Thallium | 204.38 | I, III
+82 | Pb | Lead | 207.2 | II, IV
+83 | Bi | Bismuth | 208.98 | III, V
+84 | Po | Polonium | [209] | II, IV, VI
+85 | At | Astatine | [210] | I, III, V, VII
+86 | Rn | Radon | [222] | 0, II
+87 | Fr | Francium | [223] | I
+88 | Ra | Radium | [226] | II
+89 | Ac | Actinium | [227] | III
+90 | Th | Thorium | 232.04 | IV
+91 | Pa | Protactinium | 231.04 | V
+92 | U | Uranium | 238.03 | IV, VI
+93 | Np | Neptunium | [237] | III, V, VI
+94 | Pu | Plutonium | [244] | III, IV, VI
+95 | Am | Americium | [243] | III
+96 | Cm | Curium | [247] | III
+97 | Bk | Berkelium | [247] | III, IV
+98 | Cf | Californium | [251] | III
+99 | Es | Einsteinium | [252] | III
+100 | Fm | Fermium | [257] | III
+101 | Md | Mendelevium | [258] | III
+102 | No | Nobelium | [259] | II, III
+103 | Lr | Lawrencium | [262] | III
+104 | Rf | Rutherfordium | [267] | IV
+105 | Db | Dubnium | [270] | V
+106 | Sg | Seaborgium | [269] | VI
+107 | Bh | Bohrium | [270] | VII
+108 | Hs | Hassium | [270] | VIII
+109 | Mt | Meitnerium | [278] | ?
+110 | Ds | Darmstadtium | [281] | ?
+111 | Rg | Roentgenium | [281] | ?
+112 | Cn | Copernicium | [285] | II
+113 | Nh | Nihonium | [286] | III
+114 | Fl | Flerovium | [289] | II, IV
+115 | Mc | Moscovium | [289] | III
+116 | Lv | Livermorium | [293] | II
+117 | Ts | Tennessine | [293] | I, III, V, VII
+118 | Og | Oganesson | [294] | 0

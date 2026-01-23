@@ -10,7 +10,7 @@ ds_nguyen_tu = []
 x= 0
 y =0
 
-with open(r'predict.txt') as file:
+with open(r'nguyento.txt') as file:
     lines = file.readlines()
     
     for line in lines:
@@ -20,16 +20,18 @@ with open(r'predict.txt') as file:
         ki_hieu = split_data[1].strip()
         ten = split_data[2].strip()
         ntk = split_data[3].strip()
+        hoatri = split_data[4].strip()
      
         nguyen_tu = {
             "stt": stt,
             "ki_hieu" : ki_hieu,
             "ten": ten,
-            "ntk": ntk
+            "ntk": ntk,
+            "hoatri": hoatri
         }
         ds_nguyen_tu.append(nguyen_tu)
 
-def hien_thi(stt, ki_hieu, ten, ntk):
+def hien_thi(stt, ki_hieu, ten, ntk, hoatri):
     global window
     if window:
         window.destroy()
@@ -38,7 +40,8 @@ def hien_thi(stt, ki_hieu, ten, ntk):
     Text(window,f"STT: {stt}")
     Text(window,f"Kí hiệu: {ki_hieu}")
     Text(window,f"Tên: {ten}")
-    Text(window,f"Nguyên tử khối {ntk}")
+    Text(window,f"Nguyên tử khối: {ntk}")
+    Text(window,f"Hóa trị: {hoatri}")
 
 klk = [2, 10, 18, 36, 54, 86]
 mau1 = "#F74420"
@@ -72,7 +75,8 @@ for i in pt:
     ki_hieu = ds_nguyen_tu[i]['ki_hieu']
     ten = ds_nguyen_tu[i]["ten"]
     ntk = ds_nguyen_tu[i]['ntk']
-    button = PushButton(box, text=ki_hieu, command=hien_thi, args=[stt, ki_hieu, ten, ntk], grid=[x,y],width=4, height=1)
+    hoatri = ds_nguyen_tu[i]['hoatri']
+    button = PushButton(box, text=ki_hieu, command=hien_thi, args=[stt, ki_hieu, ten, ntk, hoatri], grid=[x,y],width=4, height=1)
     button.text_size=15
     y+=1
     if i in klk:
@@ -90,7 +94,8 @@ for i in pt:
     ki_hieu = ds_nguyen_tu[i]['ki_hieu']
     ten = ds_nguyen_tu[i]["ten"]
     ntk = ds_nguyen_tu[i]['ntk']
-    button = PushButton(box, text=ki_hieu, command=hien_thi, args=[stt, ki_hieu, ten, ntk], grid=[x,y],width=4, height=1)
+    hoatri = ds_nguyen_tu[i]['hoatri']
+    button = PushButton(box, text=ki_hieu, command=hien_thi, args=[stt, ki_hieu, ten, ntk, hoatri], grid=[x,y],width=4, height=1)
     button.text_size=15
     y+=1
     if i in klkt:
@@ -121,7 +126,8 @@ for i in pt:
         ki_hieu = ds_nguyen_tu[i]['ki_hieu']
         ten = ds_nguyen_tu[i]["ten"]
         ntk = ds_nguyen_tu[i]['ntk']
-        button = PushButton(box, text=ki_hieu, command=hien_thi, args=[stt, ki_hieu, ten, ntk], grid=[x,y],width=4, height=1)
+        hoatri = ds_nguyen_tu[i]['hoatri']
+        button = PushButton(box, text=ki_hieu, command=hien_thi, args=[stt, ki_hieu, ten, ntk, hoatri], grid=[x,y],width=4, height=1)
         button.text_size=15
         y+=1
     if y >= 7:
@@ -143,7 +149,8 @@ for i in pt:
     ki_hieu = ds_nguyen_tu[i]['ki_hieu']
     ten = ds_nguyen_tu[i]["ten"]
     ntk = ds_nguyen_tu[i]['ntk']
-    button = PushButton(box, text=ki_hieu, command=hien_thi, args=[stt, ki_hieu, ten, ntk], grid=[x,y],width=4, height=1)
+    hoatri = ds_nguyen_tu[i]['hoatri']
+    button = PushButton(box, text=ki_hieu, command=hien_thi, args=[stt, ki_hieu, ten, ntk, hoatri], grid=[x,y],width=4, height=1)
     button.text_size=15
     y+=1
     if y >= 7:
@@ -169,7 +176,8 @@ for i in pt:
     ki_hieu = ds_nguyen_tu[i]['ki_hieu']
     ten = ds_nguyen_tu[i]["ten"]
     ntk = ds_nguyen_tu[i]['ntk']
-    button = PushButton(box, text=ki_hieu, command=hien_thi, args=[stt, ki_hieu, ten, ntk], grid=[x,y],width=4, height=1)
+    hoatri = ds_nguyen_tu[i]['hoatri']
+    button = PushButton(box, text=ki_hieu, command=hien_thi, args=[stt, ki_hieu, ten, ntk, hoatri], grid=[x,y],width=4, height=1)
     button.text_size=15
     y+=1
     if i in khihiem:
@@ -190,7 +198,8 @@ for i in pt:
     ki_hieu = ds_nguyen_tu[i]['ki_hieu']
     ten = ds_nguyen_tu[i]["ten"]
     ntk = ds_nguyen_tu[i]['ntk']
-    button = PushButton(box, text=ki_hieu, command=hien_thi, args=[stt, ki_hieu, ten, ntk], grid=[x,y],width=4, height=1)
+    hoatri = ds_nguyen_tu[i]['hoatri']
+    button = PushButton(box, text=ki_hieu, command=hien_thi, args=[stt, ki_hieu, ten, ntk, hoatri], grid=[x,y],width=4, height=1)
     button.text_size=15
     x+=1
     if x >= 18:
