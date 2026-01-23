@@ -10,18 +10,20 @@ ds_nguyen_tu = []
 x= 0
 y =0
 
-with open(r'nguyento.txt') as file:
+with open(r'nguyento.txt') as file: # mở file txt để lấy thông tin
     lines = file.readlines()
     
-    for line in lines:
+    for line in lines: # chia thông tin
         split_data = line.split("|")
 
+        # đặt biến cho từng thông tin
         stt = split_data[0].strip()
         ki_hieu = split_data[1].strip()
         ten = split_data[2].strip()
         ntk = split_data[3].strip()
         hoatri = split_data[4].strip()
-     
+
+        # lập một từ điển
         nguyen_tu = {
             "stt": stt,
             "ki_hieu" : ki_hieu,
@@ -29,20 +31,23 @@ with open(r'nguyento.txt') as file:
             "ntk": ntk,
             "hoatri": hoatri
         }
-        ds_nguyen_tu.append(nguyen_tu)
+        ds_nguyen_tu.append(nguyen_tu) # bỏ vào 1 list
 
-def hien_thi(stt, ki_hieu, ten, ntk, hoatri):
+def hien_thi(stt, ki_hieu, ten, ntk, hoatri): # tạo một hàm với các thông tin đc cung cấp
     global window
     if window:
         window.destroy()
-    window = Window(app)
+    window = Window(app) # tạo cửa sổ mới để hiển thị thông tin
 
+    # thông tin cần hiện thị
     Text(window,f"STT: {stt}")
     Text(window,f"Kí hiệu: {ki_hieu}")
     Text(window,f"Tên: {ten}")
     Text(window,f"Nguyên tử khối: {ntk}")
     Text(window,f"Hóa trị: {hoatri}")
 
+# khu phân loại và chỗ chứa màu
+# phân loại các nhóm 
 klk = [2, 10, 18, 36, 54, 86]
 mau1 = "#F74420"
 klkt = [3, 11, 19, 37, 55, 87]
@@ -64,21 +69,25 @@ mau9 = "#FFFF8F"
 khihiem = [1, 9, 17, 35, 53, 85, 117]
 mau10 = "#00FFFF"
 
+# phân loại trạng thái
 khi = [0, 1, 6, 7, 8, 9, 16, 17, 35, 53, 85]
 chu1 = "#FF0000"
 long = [34, 79, 111]
 chu2 = "#008000"
 
-pt = [0, 2, 10, 18, 36, 54, 86]
-for i in pt:
+pt = [0, 2, 10, 18, 36, 54, 86] # list chứa thông tin cần sắp xếp bảng tuần hoàn
+for i in pt: # cho biến i trong list để lấy từng thông tin 
+    # đặt từng biến cho từng thông tin
     stt = ds_nguyen_tu[i]['stt']
     ki_hieu = ds_nguyen_tu[i]['ki_hieu']
     ten = ds_nguyen_tu[i]["ten"]
     ntk = ds_nguyen_tu[i]['ntk']
     hoatri = ds_nguyen_tu[i]['hoatri']
+    # tạo một nút với các thông tin đã lấy đc
     button = PushButton(box, text=ki_hieu, command=hien_thi, args=[stt, ki_hieu, ten, ntk, hoatri], grid=[x,y],width=4, height=1)
     button.text_size=15
     y+=1
+    # dùng điều kiện if - else để phân loại
     if i in klk:
         button.bg = mau1
     elif i in phikim:
@@ -105,6 +114,7 @@ pt = [20, 38, "*", "**", 21, 39, 71, 103, 22, 40, 72, 104, 23, 41, 73, 105, 24, 
 y=3
 x =2
 for i in pt:
+    # dùng điều kiện if - else để phân loại trường hợp đặc biệt
     if i == "*":
         stt = "57~71"
         ki_hieu = "L"
@@ -185,11 +195,13 @@ for i in pt:
     if i in khi:
         button.text_color = chu1
 
+# tạo 1 box nhầm tạo khoảng trống
 space = Box(box, layout="grid", grid=[1,7], width=1, height=50)
 
 pt = [56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99, 100, 101, 102]
 y = 8
 x= 3
+# tạo 2 dòng chữ cho 2 trường hợp đặc biệt
 Text(box, text="L", grid=[2,8], size= 15)
 Text(box, text="A", grid=[2,9], size= 15)
 
@@ -212,6 +224,7 @@ for i in pt:
     elif i in Lanthan:
         button.bg = mau6
 
+# tạo chú thích cho dễ hiểu
 chuthich = Box(app, layout="grid")
 
 Text(chuthich, text="Chú thích: ", size= 25, grid=[0,0])
