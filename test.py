@@ -39,12 +39,12 @@ def hien_thi(stt, ki_hieu, ten, ntk, hoatri): # tạo một hàm với các thô
         window.destroy()
     window = Window(app) # tạo cửa sổ mới để hiển thị thông tin
 
-    # thông tin cần hiện thị
-    Text(window,f"STT: {stt}")
-    Text(window,f"Kí hiệu: {ki_hieu}")
-    Text(window,f"Tên: {ten}")
-    Text(window,f"Nguyên tử khối: {ntk}")
-    Text(window,f"Hóa trị: {hoatri}")
+    # thông tin cần hiển thị
+    Text(window,f"STT: {stt}", size= 20)
+    Text(window,f"Kí hiệu: {ki_hieu}", size= 20)
+    Text(window,f"Tên: {ten}", size= 20)
+    Text(window,f"Nguyên tử khối: {ntk}", size= 20)
+    Text(window,f"Hóa trị: {hoatri}", size= 20)
 
 # khu phân loại và chỗ chứa màu
 # phân loại các nhóm 
