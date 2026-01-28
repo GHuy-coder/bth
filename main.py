@@ -66,11 +66,11 @@ def hien_thi(stt, ki_hieu, ten, ntk, hoatri): # tạo một hàm với các thô
     Text(window,f"Hóa trị: {hoatri}", size= 20)
     # if not jpeg use jpg
     if(image_exists(f"bangtuanhoan_anh/{stt}.jpeg")):
-        img = Picture(window, image=f"bangtuanhoan_anh/{stt}.jpeg", width=200, height=200)
+        img = Picture(window, image=f"bangtuanhoan_anh/{stt}.jpeg", width=300, height=300)
     elif (image_exists(f"bangtuanhoan_anh/{stt}.jpg")):
-        img = Picture(window, image=f"bangtuanhoan_anh/{stt}.jpg", width=200, height=200)
+        img = Picture(window, image=f"bangtuanhoan_anh/{stt}.jpg", width=300, height=300)
     else:
-        img = Picture(window, image=f"bangtuanhoan_anh/{stt}.png", width=200, height=200)
+        img = Picture(window, image=f"bangtuanhoan_anh/{stt}.png", width=300, height=300)
 
 def loc_nhom(pt:list):
     L.visible = False
