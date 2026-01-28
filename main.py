@@ -182,7 +182,7 @@ for i in pt:
         ten = "Lant"
         ntk = "không"
         hoatri = "không"
-        button = PushButton(box, text=ki_hieu, command=hien_thi, args=[stt, ki_hieu, ten, ntk, hoatri], grid=[x,y],width=4, height=1)
+        button = PushButton(box, text=ki_hieu, grid=[x,y],width=4, height=1)
         button.text_size=15
         all_button[stt] = all_button.get(stt, button)
         y+=1
@@ -192,7 +192,7 @@ for i in pt:
         ten = "Actinit"
         ntk = "không"
         hoatri = "không"
-        button = PushButton(box, text=ki_hieu, command=hien_thi, args=[stt, ki_hieu, ten, ntk, hoatri], grid=[x,y],width=4, height=1)
+        button = PushButton(box, text=ki_hieu, grid=[x,y],width=4, height=1)
         button.text_size=15
         all_button[stt] = all_button.get(stt, button)
         y+=1
