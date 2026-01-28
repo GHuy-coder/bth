@@ -19,8 +19,6 @@ pt8 = ['1', '6', '7', '8', '15', '16', '34']
 pt9 = ['9', '17', '35', '53', '85', '117']
 pt10 = ['2', '10', '18', '36', '54', '86', '118']
 
-count = 1
-
 x= 0
 y =0
 
@@ -61,59 +59,37 @@ def hien_thi(stt, ki_hieu, ten, ntk, hoatri): # tạo một hàm với các thô
     Text(window,f"Hóa trị: {hoatri}", size= 20)
 
 def loc_nhom(pt:list):
-    global all_button, count
     L.visible = False
     A.visible = False
-    count = 1
-    if count % 2 != 0 :
-        for i in all_button.keys():
-            if i in pt:
-                all_button[i].visible = True
-            else:
-                all_button[i].visible = False
-        count += 1
-    else:
-        for i in all_button.keys():
+    for i in all_button.keys():
+        if i in pt:
             all_button[i].visible = True
-            L.visible = True
-            A.visible = True
-        count = 1
+        else:
+            all_button[i].visible = False
 
 def Lant(pt:list):
-    global all_button, count
     A.visible = False
-    count = 1
-    if count % 2 != 0 :
-        for i in all_button.keys():
-            if i in pt:
-                all_button[i].visible = True
-                L.visible = True
-            else:
-                all_button[i].visible = False
-        count += 1
-    else:
-        for i in all_button.keys():
+    for i in all_button.keys():
+        if i in pt:
             all_button[i].visible = True
             L.visible = True
-            A.visible = True
+        else:
+            all_button[i].visible = False
 
 def Acti(pt:list):
-    global all_button, count
     L.visible = False
-    count = 1
-    if count % 2 != 0 :
-        for i in all_button.keys():
-            if i in pt:
-                all_button[i].visible = True
-                A.visible = True
-            else:
-                all_button[i].visible = False
-        count += 1
-    else:
-        for i in all_button.keys():
+    for i in all_button.keys():
+        if i in pt:
             all_button[i].visible = True
-            L.visible = True
             A.visible = True
+        else:
+            all_button[i].visible = False
+
+def hien_all_buttons():
+    for i in all_button:
+        all_button[i].visible = True
+        L.visible = True
+        A.visible = True
 
 # khu phân loại và chỗ chứa màu
 # phân loại các nhóm 
@@ -342,6 +318,9 @@ for i in nhom:
         button.text_size = 15
         button.bg = mau4
     elif i == "Kim loại yếu":
+        button = PushButton(chuthich, text="Hiển thị tất cả", grid=[x - 1,y], width=15, height=1, command=hien_all_buttons)
+        button.text_size =15
+
         button = PushButton(chuthich, text= i, grid=[x, y], width=15, height=1, command=loc_nhom, args=[pt6])
         button.text_size = 15
         button.bg = mau7
