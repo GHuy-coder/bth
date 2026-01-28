@@ -64,6 +64,7 @@ def loc_nhom(pt:list):
     global all_button, count
     L.visible = False
     A.visible = False
+    count = 1
     if count % 2 != 0 :
         for i in all_button.keys():
             if i in pt:
@@ -81,6 +82,7 @@ def loc_nhom(pt:list):
 def Lant(pt:list):
     global all_button, count
     A.visible = False
+    count = 1
     if count % 2 != 0 :
         for i in all_button.keys():
             if i in pt:
@@ -98,6 +100,7 @@ def Lant(pt:list):
 def Acti(pt:list):
     global all_button, count
     L.visible = False
+    count = 1
     if count % 2 != 0 :
         for i in all_button.keys():
             if i in pt:
