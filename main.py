@@ -45,6 +45,13 @@ with open(r'nguyento.txt') as file: # mở file txt để lấy thông tin
         }
         ds_nguyen_tu.append(nguyen_tu) # bỏ vào 1 list
 
+def image_exists(image_path):
+    try:
+        with open(image_path, 'rb'):
+            return True
+    except FileNotFoundError:
+        return False
+
 def hien_thi(stt, ki_hieu, ten, ntk, hoatri): # tạo một hàm với các thông tin đc cung cấp
     global window
     if window:
@@ -57,6 +64,13 @@ def hien_thi(stt, ki_hieu, ten, ntk, hoatri): # tạo một hàm với các thô
     Text(window,f"Tên: {ten}", size= 20)
     Text(window,f"Nguyên tử khối: {ntk}", size= 20)
     Text(window,f"Hóa trị: {hoatri}", size= 20)
+    # if not jpeg use jpg
+    if(image_exists(f"bangtuanhoan_anh/{stt}.jpeg")):
+        img = Picture(window, image=f"bangtuanhoan_anh/{stt}.jpeg", width=200, height=200)
+    elif (image_exists(f"bangtuanhoan_anh/{stt}.jpg")):
+        img = Picture(window, image=f"bangtuanhoan_anh/{stt}.jpg", width=200, height=200)
+    else:
+        img = Picture(window, image=f"bangtuanhoan_anh/{stt}.png", width=200, height=200)
 
 def loc_nhom(pt:list):
     L.visible = False
