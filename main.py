@@ -6,6 +6,20 @@ box = Box(app, layout="grid")
 
 window = None
 ds_nguyen_tu = []
+all_button = {}
+nhom = ["Kim loại kiềm", "Kim loại kiềm thổ", "Lanthan", "Actini", "Kim loại chuyển tiếp", "Kim loại yếu", "Á kim", "Phi kim", "Halogen", "Khí hiếm"]
+pt1 = ['3', '11', '19', '37', '55', '87']
+pt2 = ['4', '12', '20', '38', '56', '88']
+pt3 = ['58', '59', '60', '61', '62', '63', '64', '65', '66', '67', '68', '69', '70', '71']
+pt4 = ['90', '91', '92', '93', '94', '95', '96', '97', '98', '99', '100', '101', '102', '103']
+pt5 = ['21', '22', '23', '24', '25', '26', '27', '28', '29', '30', '39', '40', '41', '42', '43', '44', '45', '46', '47', '48', '72', '73', '74', '75', '76', '77', '78', '79', '80', '104', '105', '106', '107', '108', '109', '110', '111', '112', '57', '89']
+pt6 = ['13', '31', '49', '50', '81', '82', '83', '113', '114', '115', '116']
+pt7 = ['5', '14', '32', '33', '51', '52', '84']
+pt8 = ['1', '6', '7', '8', '15', '16', '34']
+pt9 = ['9', '17', '35', '53', '85', '117']
+pt10 = ['2', '10', '18', '36', '54', '86', '118']
+
+count = 1
 
 x= 0
 y =0
@@ -45,6 +59,58 @@ def hien_thi(stt, ki_hieu, ten, ntk, hoatri): # tạo một hàm với các thô
     Text(window,f"Tên: {ten}", size= 20)
     Text(window,f"Nguyên tử khối: {ntk}", size= 20)
     Text(window,f"Hóa trị: {hoatri}", size= 20)
+
+def loc_nhom(pt:list):
+    global all_button, count
+    L.visible = False
+    A.visible = False
+    if count % 2 != 0 :
+        for i in all_button.keys():
+            if i in pt:
+                all_button[i].visible = True
+            else:
+                all_button[i].visible = False
+        count += 1
+    else:
+        for i in all_button.keys():
+            all_button[i].visible = True
+            L.visible = True
+            A.visible = True
+        count = 1
+
+def Lant(pt:list):
+    global all_button, count
+    A.visible = False
+    if count % 2 != 0 :
+        for i in all_button.keys():
+            if i in pt:
+                all_button[i].visible = True
+                L.visible = True
+            else:
+                all_button[i].visible = False
+        count += 1
+    else:
+        for i in all_button.keys():
+            all_button[i].visible = True
+            L.visible = True
+            A.visible = True
+
+def Acti(pt:list):
+    global all_button, count
+    L.visible = False
+    if count % 2 != 0 :
+        for i in all_button.keys():
+            if i in pt:
+                all_button[i].visible = True
+                A.visible = True
+            else:
+                all_button[i].visible = False
+        count += 1
+    else:
+        for i in all_button.keys():
+            all_button[i].visible = True
+            L.visible = True
+            A.visible = True
 
 # khu phân loại và chỗ chứa màu
 # phân loại các nhóm 
@@ -86,6 +152,7 @@ for i in pt: # cho biến i trong list để lấy từng thông tin
     # tạo một nút với các thông tin đã lấy đc
     button = PushButton(box, text=ki_hieu, command=hien_thi, args=[stt, ki_hieu, ten, ntk, hoatri], grid=[x,y],width=4, height=1)
     button.text_size=15
+    all_button[stt] = all_button.get(stt, button)
     y+=1
     # dùng điều kiện if - else để phân loại
     if i in klk:
@@ -106,6 +173,7 @@ for i in pt:
     hoatri = ds_nguyen_tu[i]['hoatri']
     button = PushButton(box, text=ki_hieu, command=hien_thi, args=[stt, ki_hieu, ten, ntk, hoatri], grid=[x,y],width=4, height=1)
     button.text_size=15
+    all_button[stt] = all_button.get(stt, button)
     y+=1
     if i in klkt:
         button.bg= mau2
@@ -122,6 +190,7 @@ for i in pt:
         ntk = "không"
         button = PushButton(box, text=ki_hieu, command=hien_thi, args=[stt, ki_hieu, ten, ntk], grid=[x,y],width=4, height=1)
         button.text_size=15
+        all_button[stt] = all_button.get(stt, button)
         y+=1
     elif i == "**":
         stt = "89~103"
@@ -130,6 +199,7 @@ for i in pt:
         ntk = "không"
         button = PushButton(box, text=ki_hieu, command=hien_thi, args=[stt, ki_hieu, ten, ntk], grid=[x,y],width=4, height=1)
         button.text_size=15
+        all_button[stt] = all_button.get(stt, button)
         y+=1
     else:
         stt = ds_nguyen_tu[i]['stt']
@@ -139,6 +209,7 @@ for i in pt:
         hoatri = ds_nguyen_tu[i]['hoatri']
         button = PushButton(box, text=ki_hieu, command=hien_thi, args=[stt, ki_hieu, ten, ntk, hoatri], grid=[x,y],width=4, height=1)
         button.text_size=15
+        all_button[stt] = all_button.get(stt, button)
         y+=1
     if y >= 7:
         y = 3
@@ -162,6 +233,7 @@ for i in pt:
     hoatri = ds_nguyen_tu[i]['hoatri']
     button = PushButton(box, text=ki_hieu, command=hien_thi, args=[stt, ki_hieu, ten, ntk, hoatri], grid=[x,y],width=4, height=1)
     button.text_size=15
+    all_button[stt] = all_button.get(stt, button)
     y+=1
     if y >= 7:
         y = 1
@@ -189,6 +261,7 @@ for i in pt:
     hoatri = ds_nguyen_tu[i]['hoatri']
     button = PushButton(box, text=ki_hieu, command=hien_thi, args=[stt, ki_hieu, ten, ntk, hoatri], grid=[x,y],width=4, height=1)
     button.text_size=15
+    all_button[stt] = all_button.get(stt, button)
     y+=1
     if i in khihiem:
         button.bg = mau10
@@ -202,8 +275,8 @@ pt = [56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 88, 89, 90, 91
 y = 8
 x= 3
 # tạo 2 dòng chữ cho 2 trường hợp đặc biệt
-Text(box, text="L", grid=[2,8], size= 15)
-Text(box, text="A", grid=[2,9], size= 15)
+L = Text(box, text="L", grid=[2,8], size= 15)
+A =Text(box, text="A", grid=[2,9], size= 15)
 
 for i in pt:
     stt = ds_nguyen_tu[i]['stt']
@@ -213,6 +286,7 @@ for i in pt:
     hoatri = ds_nguyen_tu[i]['hoatri']
     button = PushButton(box, text=ki_hieu, command=hien_thi, args=[stt, ki_hieu, ten, ntk, hoatri], grid=[x,y],width=4, height=1)
     button.text_size=15
+    all_button[stt] = all_button.get(stt, button)
     x+=1
     if x >= 18:
         x = 3
@@ -241,31 +315,48 @@ for i in the:
     x += 1
 
 Text(chuthich, text="Các nhóm cùng gốc trong bảng tuần hoàn: ", size= 20, grid=[0,2])
-nhom = ["Kim loại kiềm", "Kim loại kiềm thổ", "Lanthan", "Actini", "Kim loại chuyển tiếp", "Kim loại yếu", "Á kim", "Phi kim", "Halogen", "Khí hiếm"]
 x = 1
 y = 2
 for i in nhom:
-    button = PushButton(chuthich, text= i, grid=[x, y], width=15, height=1)
-    button.text_size = 15
     if i == "Kim loại kiềm":
+        button = PushButton(chuthich, text= i, grid=[x, y], width=15, height=1, command=loc_nhom, args=[pt1])
+        button.text_size = 15
         button.bg = mau1
     elif i == "Kim loại kiềm thổ":
+        button = PushButton(chuthich, text= i, grid=[x, y], width=15, height=1, command=loc_nhom, args=[pt2])
+        button.text_size = 15
         button.bg = mau2
     elif i == "Lanthan":
+        button = PushButton(chuthich, text= i, grid=[x, y], width=15, height=1, command=Lant, args=[pt3])
+        button.text_size = 15
         button.bg = mau6
     elif i == "Actini":
+        button = PushButton(chuthich, text= i, grid=[x, y], width=15, height=1, command=Acti, args=[pt4])
+        button.text_size = 15
         button.bg = mau5
     elif i == "Kim loại chuyển tiếp":
+        button = PushButton(chuthich, text= i, grid=[x, y], width=15, height=1, command=loc_nhom, args=[pt5])
+        button.text_size = 15
         button.bg = mau4
     elif i == "Kim loại yếu":
+        button = PushButton(chuthich, text= i, grid=[x, y], width=15, height=1, command=loc_nhom, args=[pt6])
+        button.text_size = 15
         button.bg = mau7
     elif i == "Á kim":
+        button = PushButton(chuthich, text= i, grid=[x, y], width=15, height=1, command=loc_nhom, args=[pt7])
+        button.text_size = 15
         button.bg = mau8
     elif i == "Phi kim":
+        button = PushButton(chuthich, text= i, grid=[x, y], width=15, height=1, command=loc_nhom, args=[pt8])
+        button.text_size = 15
         button.bg = mau3
     elif i == "Halogen":
+        button = PushButton(chuthich, text= i, grid=[x, y], width=15, height=1, command=loc_nhom, args=[pt9])
+        button.text_size = 15
         button.bg = mau9
     elif i == "Khí hiếm":
+        button = PushButton(chuthich, text= i, grid=[x, y], width=15, height=1, command=loc_nhom, args=[pt10])
+        button.text_size = 15
         button.bg = mau10
     x += 1
     if x >= 6:
