@@ -76,26 +76,20 @@ def loc_nhom(pt:list):
     L.visible = False
     A.visible = False
     for i in all_button.keys():
-        if i in pt:
+        if pt == pt3:
+            if i in pt:
+                all_button[i].visible = True
+                L.visible = True
+            else:
+                all_button[i].visible = False
+        elif pt == pt4:
+            if i in pt:
+                all_button[i].visible = True
+                A.visible = True
+            else:
+                all_button[i].visible = False
+        elif i in pt:
             all_button[i].visible = True
-        else:
-            all_button[i].visible = False
-
-def Lant(pt:list):
-    A.visible = False
-    for i in all_button.keys():
-        if i in pt:
-            all_button[i].visible = True
-            L.visible = True
-        else:
-            all_button[i].visible = False
-
-def Acti(pt:list):
-    L.visible = False
-    for i in all_button.keys():
-        if i in pt:
-            all_button[i].visible = True
-            A.visible = True
         else:
             all_button[i].visible = False
 
@@ -322,11 +316,11 @@ for i in nhom:
         button.text_size = 15
         button.bg = mau2
     elif i == "Lanthan":
-        button = PushButton(chuthich, text= i, grid=[x, y], width=15, height=1, command=Lant, args=[pt3])
+        button = PushButton(chuthich, text= i, grid=[x, y], width=15, height=1, command=loc_nhom, args=[pt3])
         button.text_size = 15
         button.bg = mau6
     elif i == "Actini":
-        button = PushButton(chuthich, text= i, grid=[x, y], width=15, height=1, command=Acti, args=[pt4])
+        button = PushButton(chuthich, text= i, grid=[x, y], width=15, height=1, command=loc_nhom, args=[pt4])
         button.text_size = 15
         button.bg = mau5
     elif i == "Kim loại chuyển tiếp":
